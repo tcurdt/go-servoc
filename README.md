@@ -82,6 +82,8 @@ For a more realistic configuration check out [the config from Sebastian End](htt
 
 [via git issue](https://github.com/tcurdt/go-servoc/issues)
 
+[via twitter](https://twitter.com/tcurdt)
+
 ## License
 
 All code and data is released under the Apache License 2.0.
