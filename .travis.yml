@@ -1,0 +1,28 @@
+language: go
+go:
+- 1.10.x
+
+branches:
+  only:
+  - master
+  - /^v\d+\.\d+.\d+$/
+
+notifications:
+  email:
+    on_success: false
+    on_failure: always
+
+script:
+- make
+
+# deploy:
+#   provider: releases
+#   api_key:
+#     secure: ylVUo4Z0MxNoUjykjYQ1aMFhyi2Z0fyXjCsf7pfwitQzrPHv+/eoJaDWDklRLtgFvOuTnZZsPjAVrHIVa0zlhv+repyys9KxPTea0GhDE9HglAcFWhuvl200kjeYFcsxa9y6tA/U8joMKCfVraYyoPrDXR1Wib9bzbmTqoBBfelF2YkzWFPb5H9Tnfg5o9L+XQP55nIMuDywpAF9x2X12fHTiFC3oQpao5GxiWnfdS6JMQC7ANPpVJs3qOCNmwXdkNxaUMqmMGnqTOrAimieR10HWXrzI76Z0wdmt+B+qqkW4izS8SPKTS4W+OMzQNpajxJq6EGZLqduDDPirayDEOU5z2Du2aYX+l5ki3ew2nmE2UVlabuy1ADtc0zeU8xV96m1sUrDHc5A0hWymh/PcC6ZXfiLFPRd6t+m/TCFXeT0vxgkF49bDcGwsJJOPtosyB+qJMtJLUO7X26sDKkN0bEzNSJqDlrUPfRnrofbphqv3rZXNAMhaAdUpSLY4Tw9yQKlp5cfU1iBSDZtuzbY4u6AW9UNq3IXwG3Iv/HsEfQAPdY9EV7q50h1llDWrYxEju5Stc4rLFO6+q1DNfk9Tlp7l7iZ4c8VybBaoB0Tx//Qs3epEWFeVvHIG3fJAgtSaIjDdHVuTvlI1a7C89zwZcJ33OkXnrlQhe9RzRTkhHc=
+#   skip_cleanup: true
+#   file_glob: true
+#   file:
+#   - "dist/*-*-*-*.tgz"
+#   on:
+#     tags: true
+#     condition: $TRAVIS_GO_VERSION =~ ^1\.10\.[0-9x]+$

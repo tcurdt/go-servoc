@@ -1,0 +1,45 @@
+motor_encoder:
+  line: 1000
+eletronic_gear:
+  molecular: 2
+  denominator: 1
+
+input_offset: 0
+weight_coefficient: 0
+
+control_mode: pos_pulse_ccw_dir
+
+mode2:
+  control: external
+  pos_filter: false
+  vel_filter: false
+
+pos_loop:
+  pp: 20000
+  pd: 0
+  pf: 1400
+  pos_filter: 7
+  pos_error: 30000
+
+vel_loop:
+  vp: 8500
+  continous_vp: 0
+  vi: 3000
+  vel_limit: 18000
+  vd: 0
+  acc: 1
+  aff: 0
+  dec: 500
+  vel_filter: 7
+
+current_loop:
+  cp: 3000
+  continous_current: 6000
+  ci: 500
+  limit_current: 15000
+
+threshold_setting:
+  temp_limit: 4
+  over_voltage_limit: -10923
+  under_voltage_limit: 550
+  i2t_limit: 0
