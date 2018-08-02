@@ -73,7 +73,7 @@ threshold_setting:
   i2t_limit: 0
 ```
 
-For a more realistic configuration check out [the config from Sebastian End](http://).
+For a more realistic configuration check out [the config from Sebastian End](https://github.com/tcurdt/go-servoc/blob/master/src/sebastian.yaml).
 
 
 ## Where to ask questions
