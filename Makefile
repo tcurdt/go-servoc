@@ -1,14 +1,16 @@
 include .project
 
 BUILDS=\
-  darwin-amd64  \
-  linux-amd64   \
-  windows-amd64 \
+  darwin-arm64  \
+#   darwin-amd64  \
 
-  # linux-386     \
-  # linux-arm     \
-  # linux-arm64   \
-  # windows-386   \
+#   linux-amd64   \
+# 	linux-386     \
+# 	linux-arm     \
+# 	linux-arm64   \
+
+# 	windows-386   \
+#   windows-amd64 \
 
 MAKEFLAGS += --silent
 
@@ -30,7 +32,7 @@ $(BINS): ARCH = $(word 2,$(subst -, ,$*))
 $(BINS): $(BINS_PATTERN):
 	echo "building bin: [$(OS) $(ARCH)]"
 	mkdir -p `dirname $@`
-	cd src/$(NAME) && GOPATH=$(BASE) GOOS=$(OS) GOARCH=$(ARCH) go build -o $(BASE)/$@
+	cd src && GOPATH=$(BASE) GOOS=$(OS) GOARCH=$(ARCH) go build -o $(BASE)/$@
 	touch $@
 
 
@@ -45,10 +47,6 @@ $(DISTS): $(DISTS_PATTERN): $(BINS)
 .PHONY: clean
 clean:
 	rm -rf dist bin
-
-.PHONY: dep
-dep:
-	cd src/$(NAME) && GOPATH=$(BASE) dep ensure
 
 .PHONY: release
 release: all

@@ -40,6 +40,6 @@ current_loop:
 
 threshold_setting:
   temp_limit: 4
-  over_voltage_limit: -10923
+  over_voltage_limit: 54613 # -10923
   under_voltage_limit: 550
   i2t_limit: 0

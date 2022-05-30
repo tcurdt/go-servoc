@@ -6,7 +6,7 @@ import (
 )
 
 var (
-	app      = kingpin.New("servo", "Command line tool to interact with JMC IHSV57 servos")
+	app      = kingpin.New("jmc-config", "Command line tool to interact with JMC IHSV57 servos")
 	debug    = app.Flag("debug", "Be more verbose.").Short('d').Bool()
 	portname = app.Flag("port", "Serial port").Short('p').Default("/dev/cu.serial").String()
 
