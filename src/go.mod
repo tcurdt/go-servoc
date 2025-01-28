@@ -3,7 +3,7 @@ module vafer.org/jmc-servo
 go 1.18
 
 require (
-	github.com/alecthomas/kingpin v2.2.6+incompatible
+	github.com/alecthomas/kingpin v2.4.0+incompatible
 	github.com/go-yaml/yaml v2.1.0+incompatible
 	github.com/jacobsa/go-serial v0.0.0-20180131005756-15cf729a72d4
 )
